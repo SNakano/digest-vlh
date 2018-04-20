@@ -2,6 +2,9 @@
 
 *IMPORTANT: it library is very tiny hash implement. don't use for encryption or something.*
 
+[![Build Status](https://travis-ci.org/SNakano/digest-vlh-ruby.svg?branch=master)](https://travis-ci.org/SNakano/digest-vlh-ruby)
+[![Gem](https://img.shields.io/gem/dt/digest-vlh.svg)](https://rubygems.org/gems/digest-vlh)
+
 ## Installation
 
 Add this line to your application's Gemfile:

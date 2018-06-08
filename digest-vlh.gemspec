@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "digest-vlh"
-  s.version     = "0.0.1"
+  s.version     = "0.0.2"
   s.license     = "MIT"
   s.summary     = "variable length ouptput hash"
   s.description = "a tiny implement variable length ouptput hash"

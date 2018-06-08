@@ -29,14 +29,14 @@ module Digest
 
     def digest(str = "")
       update(str)
-      digest = expand_digest.to_i(BASE) % div_num
-      sprintf("%0#{@len}s", digest)
+      digest = (expand_digest.to_i(BASE) % div_num).to_s
+      digest.rjust(@len, "0")
     end
 
     def hexdigest(str = "")
       update(str)
       digest = (expand_digest.to_i(BASE) % div_hex).to_s(BASE)
-      sprintf("%0#{@len}s", digest)
+      digest.rjust(@len, "0")
     end
 
     alias_method :<<, :update

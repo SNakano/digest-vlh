@@ -47,4 +47,10 @@ class VLHTest < Test::Unit::TestCase
     d2 = vlh.hexdigest
     assert_not_equal(d1, d2)
   end
+
+  def test_left_pad
+    digest = Digest::VLH.hexdigest("1", 16)
+
+    assert_equal("029b8a3b0e189ad1", digest)
+  end
 end

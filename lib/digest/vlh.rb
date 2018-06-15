@@ -28,12 +28,16 @@ module Digest
     end
 
     def digest(str = "")
+      return "" if @len <= 0
+
       update(str)
       digest = (expand_digest.to_i(BASE) % div_num).to_s
       digest.rjust(@len, "0")
     end
 
     def hexdigest(str = "")
+      return "" if @len <= 0
+
       update(str)
       digest = (expand_digest.to_i(BASE) % div_hex).to_s(BASE)
       digest.rjust(@len, "0")

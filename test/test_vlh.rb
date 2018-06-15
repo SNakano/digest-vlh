@@ -53,4 +53,16 @@ class VLHTest < Test::Unit::TestCase
 
     assert_equal("029b8a3b0e189ad1", digest)
   end
+
+  def test_zero_length_hexdigest
+    digest = Digest::VLH.hexdigest("Lorem ipsum", 0)
+
+    assert_equal(0, digest.length)
+  end
+
+  def test_zero_length_digest
+    digest = Digest::VLH.digest("Lorem ipsum", 0)
+
+    assert_equal(0, digest.length)
+  end
 end
